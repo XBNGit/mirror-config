@@ -14,7 +14,7 @@ mybatis:
 
 spring:
    application:
-    name: mirror-provider-user   
+    name: mirror-config-client   
    profiles: dev
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource        
@@ -54,7 +54,7 @@ mybatis:
 
 spring:
    application:
-    name: mirror-provider-user   
+    name: mirror-config-client    
    profiles: test
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource        
