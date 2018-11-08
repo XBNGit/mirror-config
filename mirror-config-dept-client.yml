@@ -1,0 +1,86 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 8001
+  #context-path: /xbn
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml      
+  type-aliases-package: top.xu.xbn.entity   
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                     
+
+spring:
+   application:
+    name: mirror-provider-user   
+   profiles: dev
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource        
+    driver-class-name: org.gjt.mm.mysql.Driver            
+    url: jdbc:mysql://localhost:3306/store          
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5                                        
+      initial-size: 5                                     
+      max-total: 5                                       
+      max-wait-millis: 200                           
+
+eureka:
+  client: 
+    service-url:
+     # defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/
+      #,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: mirror-provider-user8001
+    prefer-ip-address: true   
+info:
+  app.name: mirror
+  company.name: 徐君杰.top:8080/client/index.do
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server:
+  port: 8001
+  #context-path: /xbn
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml      
+  type-aliases-package: top.xu.xbn.entity   
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                     
+
+spring:
+   application:
+    name: mirror-provider-user   
+   profiles: test
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource        
+    driver-class-name: org.gjt.mm.mysql.Driver            
+    url: jdbc:mysql://localhost:3306/store          
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5                                        
+      initial-size: 5                                     
+      max-total: 5                                       
+      max-wait-millis: 200                           
+
+eureka:
+  client: 
+    service-url:
+     # defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/
+      #,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: mirror-provider-user8001
+    prefer-ip-address: true   
+info:
+  app.name: mirror
+  company.name: 徐君杰.top:8080/client/index.do
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+
