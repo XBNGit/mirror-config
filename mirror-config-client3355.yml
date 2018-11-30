@@ -8,7 +8,7 @@ server:
 spring:
   profiles: dev
   application:
-    name: mirror-config-client111
+    name: mirror-config-client222
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -22,7 +22,7 @@ server:
 spring:
   profiles: test
   application:
-    name: mirror-config-client111
+    name: mirror-config-client222
 eureka:
   client:
     service-url:
