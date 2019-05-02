@@ -44,4 +44,8 @@ ribbon:
 management:
   security:
     enabled: false
-
+---
+  server:
+    port: 528
+  spring:
+    profiles: dev
