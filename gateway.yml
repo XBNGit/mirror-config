@@ -45,3 +45,5 @@ management:
   security:
     enabled: false
 
+env:
+  test3
