@@ -6,17 +6,6 @@ spring:
     name: xbn-zuul-gateway
 
 
- 
-eureka:
-  client: #客户端注册进eureka服务列表内,在多个eureka中都进行服务注册
-    service-url:
-      # defaultZone: http://localhost:7001/eureka
-      defaultZone: http://eureka10010.com:10010/eureka/,http://eureka10011.com:10011/eureka/
-      #,http://eureka7003.com:7003/eureka/
-  instance:
-    instance-id: xbn-zuul-9528   #自定义微服务服务器名称
-    prefer-ip-address: true     #访问路径可以显示IP地址
-
  #zuul和fegin的区别是，zuul是作为所有外部访问的入口
  #提供网关过滤等路由功能，fegin是微服务内部调用的一个微服务，一个对外一个对内
 zuul:
