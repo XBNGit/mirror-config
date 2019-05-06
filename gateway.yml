@@ -3,22 +3,7 @@ server:
  
 spring: 
   application:
-    name: xbn-zuul-gateway
-
-
- #zuul和fegin的区别是，zuul是作为所有外部访问的入口
- #提供网关过滤等路由功能，fegin是微服务内部调用的一个微服务，一个对外一个对内
-zuul:
-  #ignored-services: mirror-provider-user  #忽略真实的微服务应用名访问
-  prefix: /zuul          #定义访问前缀
-  ignored-services: "*" #所有微服务的真实名字忽略
-  routes:
-    #mirror-provider-user.path: /users/**   #把这个微服务应用名称映射为path
-    xbn-company: /company/**   #把这个微服务应用名称映射为path
-    xbn-bk: /xbn/**
-    store-test-product: /store/**   #购买链路微服务调用测试
-  servlet-path: /        #防止前缀裁剪微服务访问地址
-
+    name: xbn-bus-application
 
 info:
   app.name: xbn7
