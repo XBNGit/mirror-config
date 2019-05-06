@@ -30,5 +30,5 @@ zuul:
     xbn-company: /company/**   #把这个微服务应用名称映射为path
     xbn-bk: /xbn/**
     store-test-product: /store/**   #购买链路微服务调用测试
-    xbn-bus-application: /**
+    xbn-bus-application: /self/**
   servlet-path: /        #防止前缀裁剪微服务访问地址
