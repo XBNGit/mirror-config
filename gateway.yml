@@ -23,7 +23,7 @@ env:
   test3
 zuul:
   #ignored-services: mirror-provider-user  #忽略真实的微服务应用名访问
-  prefix: /zuul          #定义访问前缀
+  #prefix: /zuul          #定义访问前缀
   ignored-services: "*" #所有微服务的真实名字忽略
   routes:
     #mirror-provider-user.path: /users/**   #把这个微服务应用名称映射为path
